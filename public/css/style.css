@@ -1,0 +1,26 @@
+#game-board-wrapper {
+    border: 2px solid black;
+    position: relative;
+}
+
+#ladder-1, #ladder-2, #ladder-3, #snake-1, #snake-2,#player1  {
+    display: none;
+}
+
+#player1 {
+    position: relative;
+    top: 740px;
+}
+
+.dice-button {
+    position: absolute;
+    top: 200px;
+}
+
+#number-on-the-dice {
+    font-family: calibri;
+    font-size: 50pt;
+    position: absolute;
+    top: 250px;
+    left: 38px;
+}
