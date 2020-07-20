@@ -13,14 +13,16 @@
 			<img id="snake-1" src="/images/snake_1.png"/>
 			<img id="snake-2" src="/images/snake_2.png"/>
 			<div class="row">
+				<div class="col-sm-7 offset-sm-4">
+					<button class="btn btn-info dice-button" onClick="rollTheDice()">Roll Me!</button>
+					<div id="number-on-the-dice">0</div>
+				</div>	
+			</div>
+			<div class="row">
 				<div class="col-sm-10">
 					<canvas id="game-board-wrapper" width="800" height="800">
 						<canvas id="player-canvas" width="800" height="800"></canvas>
 					</canvas>
-				</div>	
-				<div class="col-sm-2">
-					<button class="btn btn-info dice-button" onClick="rollTheDice()">Roll Me!</button>
-					<div id="number-on-the-dice"></div>
 				</div>	
 			</div>
 
