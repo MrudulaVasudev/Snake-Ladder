@@ -74,10 +74,10 @@ const rollTheDice = () => {
 }
 
 const clearRectangle = () => {
-    ctx.clearRect(previousX, previousY, 40, 40)
+    ctx.clearRect(previousX, previousY, 10, 10)
     if (cellNumber != 0 && cellNumber % 2 === 0) {
         ctx.fillStyle = 'pink'
-        ctx.fillRect(previousX, previousY, 40, 40)
+        ctx.fillRect(previousX, previousY, 10, 10)
     } else {
         ctx.fillStyle = 'white'
     }
@@ -110,19 +110,25 @@ const moveThePlayer = (num) => {
             playerX = playerX - maxWidth;
             drawBall(maxWidth - playerX + 40, playerY - 40)
         }
+        cellNumber += num;
     } else {
         if (playerX <= maxWidth) {
             clearRectangle()
             drawBall(maxWidth - playerX + 40, playerY - 40)
+            cellNumber += num;
         } else if (playerX > maxWidth && cellNumber < 90) {
             clearRectangle()
             playerY -= 80;
             playerLToR = true;
             playerX = playerX - maxWidth;
             drawBall(playerX - 40, playerY - 40)
+            cellNumber += num;
+        }
+        if (playerX > maxWidth && cellNumber+num > 100) {
+            playerX -= (num*width)
         }
     }
-    cellNumber += num;
+    
     switch(cellNumber) {
         case 23: jumpToNumber(4);
                 break;
@@ -137,5 +143,7 @@ const moveThePlayer = (num) => {
     }
     if (cellNumber != 100) {
         $('.dice-button').prop('disabled', false)
+    } else {
+        alert("Congratulations! You won the game.")
     }
 }

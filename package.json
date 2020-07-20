@@ -9,12 +9,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrudulaVasudev/SnakeAndLadder.git"
+    "url": "https://github.com/MrudulaVasudev/Snake-Ladder.git"
   },
   "bugs": {
-    "url": "https://github.com/MrudulaVasudev/SnakeAndLadder/issues"
+    "url": "https://github.com/MrudulaVasudev/Snake-Ladder.git/issues"
   },
-  "homepage": "https://github.com/MrudulaVasudev/SnakeAndLadder#readme",
+  "homepage": "https://github.com/MrudulaVasudev/Snake-Ladder#readme",
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
